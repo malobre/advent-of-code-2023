@@ -33,11 +33,11 @@ fn main() -> Result<(), anyhow::Error> {
                 break;
             }
 
-            if index > line.len() {
+            index += 1;
+
+            if index >= line.len() {
                 bail!("line has no digit: {line}");
             }
-
-            index += 1;
         }
 
         let mut index = line.len();
